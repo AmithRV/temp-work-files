@@ -1,7 +1,9 @@
 import './App.css';
 import CalendarDemo from './Components/Calander';
 import Form from './Components/Form';
+import FormValidaton from './Components/FormValidation';
 import FormikFormDemo from './Components/Newform';
+import NewTemp from './Components/NewTemp';
 import Temp from './Components/Temp';
 
 function App() 
@@ -10,8 +12,10 @@ function App()
     <div className="App">
     {/*<Form/>*/}
     {/*<Temp/> */}
-    <FormikFormDemo/> 
+    {/* <FormikFormDemo/>  */}
     {/* <CalendarDemo/> */}
+    {/* <FormValidaton/> */}
+    <NewTemp/>
     </div>
   );
 }

@@ -39,6 +39,9 @@ function FormikFormDemo() {
             else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(data.email)) {
                 errors.email = 'Invalid email address. E.g. example@email.com';
             }
+            if(data.date===null){
+                errors.date='date required';
+            }
 
 
             if (!data.accept) {
@@ -92,6 +95,7 @@ function FormikFormDemo() {
                                 <Calendar id="date" name="date" value={formik.values.date} onChange={formik.handleChange} dateFormat="dd/mm/yy" mask="99/99/9999" showIcon />
                                 <label htmlFor="date">Birthday</label>
                             </span>
+                            {getFormErrorMessage('date')}
                         </div>
                         
                         <div className="field">
